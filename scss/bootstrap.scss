@@ -18,7 +18,7 @@ $container-max-widths: (
 );
 
 // gutter
-
+$spacer: 16px !default;
 $grid-gutter-width: 1.5rem;
 $gutters: (
   0: 0,
