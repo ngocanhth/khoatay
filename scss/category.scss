@@ -1,0 +1,42 @@
+@import "bootstrap";
+
+// Category items
+.category__description {
+max-width: 730px;
+margin: 0 auto;
+padding-top: 120px;
+
+  p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 198%;
+    margin-bottom: 0;
+  }
+}
+
+.catqagory__grid {
+    padding-top: 120px;
+
+.product__img {
+  overflow: hidden;
+  
+  img {
+    max-width: 100%;
+    @include imageTransition;
+  }
+  .img__hover {
+      @include imageHidden;
+  }
+
+  &:hover {
+    img {
+      @include imageHidden;
+    }
+    .img__hover {
+      @include imageActive;
+      @include imageTransitionHover;
+    }
+  }
+}
+}

@@ -1,0 +1,83 @@
+@import "bootstrap";
+
+// banner__hourse
+.banner {
+    position: relative;
+
+    &.banner__product {
+        &::before {
+            content: '';
+            background-color: #8d5d34;
+            opacity: 0.1;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .banner__hourse img {
+            height: 400px;
+
+            @include media-breakpoint-up(md) {
+                height: 646px;
+            }
+        }
+
+        .banner__inner {
+            h1 {
+                color: #fff;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 1;
+                letter-spacing: 0.05em;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 60px;
+                    line-height: 72px;
+                }
+            }
+          }
+    }
+}
+
+.banner__hourse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.product__infomation {
+    color: #fff;
+
+    h3 {
+        font-family: 'Barlow Condensed';
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 198%;
+        @include textGradient;
+    }
+
+    p {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: justify;
+        margin-bottom: 0;
+
+    }
+}
+
+.specification__info {
+    margin-right: 37px;
+}
+
+.table__specification {
+    tr:nth-child(even) {
+        background-color: #353535;
+    }
+}
