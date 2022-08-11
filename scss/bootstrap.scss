@@ -4,6 +4,8 @@ $danger: #8D5D34;
 
 $grid-gutter-width: 30px !default;
 
+$enable-cssgrid: true;
+
 // Container padding
 
 $container-padding-x: $grid-gutter-width !default;
@@ -46,4 +48,231 @@ $gutters: (
     @include make-container();
   }
 
+  // Header
+
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  font-family: 'Barlow';
+  font-weight: 400;
+}
+
+@mixin textGradient {
+  background: linear-gradient(268.34deg, #FFFFB1 -14.11%, #CB8C2D 96.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin imageActive {
+  visibility: visible;
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+
+@mixin imageHidden {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+@mixin imageTransition {
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+@mixin imageTransitionHover {
+  -webkit-transform: scale(1.25);
+	transform: scale(1.25);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+// banner__hourse
+
+  .banner__hourse {
+  }
+
+// Category
+
+.banner {
+  height: 400px;
+  background-color: $danger;
+  
+  .banner__container {
+    position: relative;
+  }
+
+  .banner__inner {
+    font-family: 'Barlow Condensed';
+    padding-top: 178px;
+    padding-bottom: 73px;
+    text-transform: uppercase;
+
+    h1 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 96px;
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      @include textGradient;
+    }
+  }
+
+  .banner__key {
+    position: absolute;
+    top: 131px;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .banner__backlink {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .banner {
+      height: 646px;
+  }
+}
+
+// Category items
+
+.category__description {
+  max-width: 730px;
+  margin: 0 auto;
+  padding-top: 120px;
+
+    p {
+      color: #fff;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 198%;
+      margin-bottom: 0;
+    }
+}
+
+.catqagory__grid {
+  padding-top: 120px;
+
+  .product__img {
+    overflow: hidden;
+    
+    img {
+      max-width: 100%;
+      @include imageTransition;
+    }
+    .img__hover {
+        @include imageHidden;
+    }
+
+    &:hover {
+      img {
+        @include imageHidden;
+      }
+      .img__hover {
+        @include imageActive;
+        @include imageTransitionHover;
+      }
+    }
+  }
+}
+
+// pagination
+
+.pagination {
+  height: 357px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #FFFFB1, #CB8C2D);
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pagination__link {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    display: block;
+
+    &.previous__link {
+      padding-left: 24px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 16px;
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        background-image: url('../images/previous-icon.png');
+      }
+    }
+
+    &.next__link {
+      padding-right: 24px;
+      text-align: right;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 16px;
+        display: block;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        background-image: url('../images/next-icon.png');
+      }
+    }
+  }
+
+  .pagination__subtitle {
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @include textGradient;
+  }
+}

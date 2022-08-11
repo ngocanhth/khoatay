@@ -8,29 +8,15 @@
   <meta name="generator" content="Hugo 0.84.0">
   <title>Album example · Bootstrap v5.0</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-
-  
-
-  <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/category.min.css">
-<meta name="theme-color" content="#7952b3">
+  <link rel="stylesheet" href="fonts/BarlowCondensed/stylesheet.css">
+  <link rel="stylesheet" href="fonts/barlow/stylesheet.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/category.min.css">
 </head>
 <body>
   
-<header>
-<div class="collapse bg-dark" id="navbarHeader">
+<header class="bg-danger">
+<div class="collapse" id="navbarHeader">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-md-7 py-4">
@@ -48,135 +34,152 @@
     </div>
   </div>
 </div>
-<div class="navbar navbar-dark bg-dark shadow-sm">
+<div class="navbar">
   <div class="container">
     <a href="#" class="navbar-brand d-flex align-items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-      <strong>Album</strong>
+      <img src="images/Logo-Heleh.png" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span>MENU</span>
       <span class="navbar-toggler-icon"></span>
     </button>
+    <select name="" id="">Select Lang</select>
   </div>
 </div>
 </header>
 
 <main>
-  <div class="album py-5 bg-light">
+  <div class="banner">
+    <div class="container banner__container h-100">
+      <div class="banner__inner">
+        <a class="banner__backlink text-white text-decoration-none" href="#">Quay lại</a>
+        <div class="banner__container--title">
+          <p>Sản phẩm</p>
+          <h1>tiêu chuẩn châu âu </h1>
+        </div>
+        <div class="banner__logo">
+            <img src="images/italia-logo.png" alt="">
+        </div>
+      </div>
+      <div class="banner__key">
+        <img src="images/key.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="banner__hourse">
+    <img class="img-fluid" src="images/house.jpg" alt="">
+  </div>
+  <div class="catqagory__items bg-primary">
     <div class="container-xl">
-      <div class="category-description px-4 text-center max">
+      <div class="category__description px-4 text-center">
         <p>Với mong muốn mang đến những sản phẩm Tiêu Chuẩn Châu Âu cho người tiêu dùng Việt Nam.
           Từ năm 2015, Khóa Huy Hoàng đã hợp tác với thương hiệu sản xuất khóa hàng đầu Châu Âu HeleH để cho ra đời nhiều sản phẩm được sản xuất tại Châu Âu, hoặc sản xuất một số bộ phận của sản phẩm theo yêu cầu của Khóa Huy Hoàng.</p>
       </div>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+      <div class="catqagory__grid grid text-white">
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key1.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key2.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key3.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key4.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key5.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key6.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key7.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key8.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
-             
-            </div>
+        <div class="g-col-12 g-col-sm-6 g-col-md-4">
+          <div class="product__img d-flex justify-content-center align-items-center">
+            <img src="images/key9.png" alt="">
+            <img class="img__hover" src="images/hover-key1.png" alt="">
+          </div>
+          <div class="product__name text-center">
+            <p>KHÓA TAY NẮM HC 85 KING PVD GOLD</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagination bg-primary">
+    <div class="container">
+      <div class="previous">
+        <a class="pagination__link previous__link" href="#">Quay lại</a>
+        <p class="pagination__subtitle">Sản phẩm</p>
+      </div>
+      <div class="next">
+        <a class="pagination__link next__link" href="#">Xem tiếp</a>
+        <p class="pagination__subtitle">Tân cổ điển hy lạp</p>
       </div>
     </div>
   </div>
 
 </main>
 
-<footer class="text-muted py-5">
-<div class="container">
-  
+<footer class="py-5 bg-primary">
+<div class="container d-flex justify-content-between align-items-center text-white">
+  <p class="mb-0">Copyright © 2022 - khoahuyhoang.com </p>
+  <p class="mb-0">Download catalog</p>
 </div>
 </footer>
-
-
-  <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    
-
 
 </body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container><loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
