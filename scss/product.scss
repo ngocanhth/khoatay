@@ -109,7 +109,7 @@
         font-size: 16px;
         line-height: 26px;
         text-align: justify;
-        margin-bottom: 0;
+        margin-bottom: 12px;
     }
 
     .container-xl {
@@ -148,6 +148,12 @@
     }
 }
 
+.specification__image {
+    img {
+        width: 100%;
+    }
+}
+
 .specification__image,
 .specification__info {
     width: 100%;
@@ -160,6 +166,17 @@
     }
 }
 
+.specification__img {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
+}
+.specification__info {
+    margin-bottom: 50px;
+}
+
 @include media-breakpoint-up(lg) {
     .specification__info {
         margin-right: 37px;
@@ -169,5 +186,104 @@
 .table__specification {
     tr:nth-child(even) {
         background-color: #353535;
+    }
+}
+
+.specification__intro {
+    margin-top: 50px;
+}
+
+.specification__detail,
+.specification__intro {
+    margin-bottom: 50px;
+}
+
+@include media-breakpoint-up(lg) {
+    .specification__intro {
+        margin-top: 130px;
+    }
+
+    .specification__detail,
+    .specification__intro {
+        margin-bottom: 120px;
+    }
+}
+
+.specification__detail {
+    h3 {
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 162%;
+        text-transform: uppercase;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 4px;
+                left: 0;
+                z-index: 1;
+                display: block;
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-image: url('../images/checklist.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+
+    .specification__img {
+        @include media-breakpoint-up(lg) {
+            width: 66%;
+            max-width: 454px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 554px;
+        }
+    }
+
+    .specification__img {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .specification__desmaterial {
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            max-width: 443px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.specification__media {
+    padding-bottom: 119px;
+    h3 {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 162%;
+        text-transform: uppercase;
+        text-align: center;
+        @include textGradient;
+        margin-bottom: 40px;
     }
 }
