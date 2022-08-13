@@ -122,9 +122,14 @@ body {
 
   .banner__inner {
     font-family: 'Barlow Condensed';
+    padding-top: 85px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    
+  @include media-breakpoint-up(lg) {
     padding-top: 178px;
     padding-bottom: 73px;
-    text-transform: uppercase;
+  }
 
     h1 {
         color: #fff;
@@ -224,7 +229,10 @@ body {
     display: flex;
     justify-content: space-between;
   }
-
+  .previous,
+  .next {
+    width: calc(50% - 30px);
+  }
   .next {
     text-align: right;
   }
@@ -305,10 +313,6 @@ body {
     line-height: 18px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    max-width: 150px;
-    @include media-breakpoint-up(md) {
-      max-width: 50%;
-    }
 
     @include textGradient;
     margin-top: 10px;

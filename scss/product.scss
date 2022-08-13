@@ -276,7 +276,11 @@
 }
 
 .specification__media {
-    padding-bottom: 119px;
+    padding-bottom: 50px;
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 119px;
+    }
+
     h3 {
         font-weight: 300;
         font-size: 36px;
