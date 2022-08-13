@@ -18,25 +18,35 @@ padding-top: 120px;
 .catqagory__grid {
     padding-top: 120px;
 
-.product__img {
-  overflow: hidden;
-  
-  img {
-    max-width: 100%;
-    @include imageTransition;
-  }
-  .img__hover {
-      @include imageHidden;
-  }
-
-  &:hover {
+  .product__img {
+    overflow: hidden;
+    
     img {
-      @include imageHidden;
+      max-width: 100%;
+      @include imageTransition;
     }
     .img__hover {
-      @include imageActive;
-      @include imageTransitionHover;
+        @include imageHidden;
+    }
+
+    &:hover {
+      img {
+        @include imageHidden;
+      }
+      .img__hover {
+        @include imageActive;
+        @include imageTransitionHover;
+      }
     }
   }
 }
+
+.product__name .product__link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

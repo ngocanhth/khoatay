@@ -10,12 +10,22 @@ $enable-cssgrid: true;
 
 $container-padding-x: $grid-gutter-width !default;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xsl: 1024px,
+  xl: 1170px,
+);
+
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xsl: 1024px,
+  xl: 1170px,
 );
 
 // gutter
@@ -119,9 +129,14 @@ body {
     h1 {
         color: #fff;
         font-weight: 600;
-        font-size: 80px;
-        line-height: 96px;
+        font-size: 20px;
+        line-height: 24px;
         letter-spacing: 0.05em;
+
+        @include media-breakpoint-up(md) {
+          font-size: 80px;
+          line-height: 96px;
+        }
     }
 
     p {
@@ -137,9 +152,21 @@ body {
 
   .banner__key {
     position: absolute;
-    top: 131px;
+    bottom: -86px;
     right: 0;
     z-index: 2;
+
+    img {
+      max-height: 200px;
+    }
+
+    @include media-breakpoint-up(md) {
+      top: 150px;
+      right: 13px;
+      img {
+        max-height: 100%;
+      }
+    }
   }
 
   .banner__backlink {
@@ -150,16 +177,34 @@ body {
   }
 }
 
+.banner__logo {
+  max-width: 110px;
+  margin-top: 20px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .banner {
       height: 646px;
   }
 }
 
+.banner__hourse {
+  img {
+    width: 100%;
+  }
+}
+
 // pagination
 
 .pagination {
-  height: 357px;
+  height: 150px;
+  @include media-breakpoint-up(lg) {
+    height: 357px;
+  }
   display: flex;
   justify-content:center;
   align-items: center;
@@ -180,14 +225,19 @@ body {
     font-family: 'Barlow Condensed';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
     position: relative;
     display: block;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+      line-height: 29px;
+    }
 
     &.previous__link {
       padding-left: 24px;
@@ -203,6 +253,14 @@ body {
         transform: translateY(-50%);
         z-index: 1;
         background-image: url('../images/previous-icon.png');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+
+        @include media-breakpoint-up(md) {
+          width: 24px;
+          height: 16px;
+        }
       }
     }
 
@@ -221,16 +279,31 @@ body {
         transform: translateY(-50%);
         z-index: 1;
         background-image: url('../images/next-icon.png');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+
+        @include media-breakpoint-up(md) {
+          width: 24px;
+          height: 16px;
+        }
       }
     }
   }
 
   .pagination__subtitle {
     font-weight: 400;
-    font-size: 54px;
-    line-height: 65px;
+    font-size: 14px;
+    line-height: 18px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     @include textGradient;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 54px;
+      line-height: 65px;
+    }
   }
 }
