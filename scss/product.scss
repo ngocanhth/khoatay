@@ -299,6 +299,22 @@
         padding-bottom: 119px;
     }
 
+    iframe {
+        height: 245px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        iframe {
+            height: 400px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        iframe {
+            height: 504px;
+        }
+    }
+
     h3 {
         font-weight: 300;
         font-size: 36px;
